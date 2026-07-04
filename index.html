@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jomel Hernandez | Virtual Professional</title>
   
-  <!-- SEO Meta -->
   <meta name="description" content="Jomel Hernandez is your Genial Virtual Professional. Expert VAA services: admin support, social media, lead management, and web development.">
   <meta name="keywords" content="virtual assistant, administrative support, VAA, social media management, lead management, web development">
   <meta property="og:title" content="Jomel Hernandez | Your Genial Virtual Professional">
@@ -14,38 +13,38 @@
   <meta property="og:description" content="Your Trusted Virtual Administrative Assistant - Streamlining Your Success">
   <meta name="theme-color" content="#0f172a">
   
-  <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Shared Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- ===== NAVIGATION (FULLY WORKING) ===== -->
+<nav class="navbar">
+  <div class="container nav-flex">
+    <a href="index.html" class="logo"><i class="fas fa-user-tie"></i> Jomel Hernandez</a>
+    
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="btn-small"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
+    </ul>
+  </div>
+</nav>
 
 <!-- ===== DARK MODE TOGGLE ===== -->
 <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
   <i class="fas fa-moon" id="darkIcon"></i>
   <span id="darkLabel">Dark</span>
 </button>
-
-<!-- ===== FLOATING NAVIGATION ===== -->
-<nav class="floating-nav" id="floatingNav">
-  <a href="#home" data-section="home">
-    <span class="tooltip">Home</span>
-  </a>
-  <a href="#why" data-section="why">
-    <span class="tooltip">Why Me</span>
-  </a>
-  <a href="#skills" data-section="skills">
-    <span class="tooltip">Skills</span>
-  </a>
-  <a href="#contact-preview" data-section="contact-preview">
-    <span class="tooltip">Contact</span>
-  </a>
-</nav>
 
 <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
 <a href="https://wa.me/639165534649" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
@@ -60,25 +59,23 @@
 
 <!-- ===== STICKY CTA BAR ===== -->
 <div class="sticky-cta" id="stickyCta">
-  <span class="cta-text">
-    <i class="fab fa-whatsapp"></i> Ready to grow your business?
-  </span>
-  <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp">
-    <i class="fab fa-whatsapp"></i> Chat Now
-  </a>
+  <span class="cta-text"><i class="fab fa-whatsapp"></i> Ready to grow your business?</span>
+  <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat Now</a>
 </div>
 
+<!-- ===== FLOATING NAV ===== -->
+<nav class="floating-nav" id="floatingNav">
+  <a href="#home" data-section="home"><span class="tooltip">Home</span></a>
+  <a href="#why" data-section="why"><span class="tooltip">Why Me</span></a>
+  <a href="#skills" data-section="skills"><span class="tooltip">Skills</span></a>
+  <a href="#contact-preview" data-section="contact-preview"><span class="tooltip">Contact</span></a>
+</nav>
+
 <!-- ============================================================ -->
-<!-- SECTION 1: HERO -->
+<!-- HERO SECTION -->
 <!-- ============================================================ -->
 <section id="home" class="hero-section">
-  <!-- Parallax Background -->
-  <div class="parallax-bg">
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
-  
+  <div class="parallax-bg"><div class="shape"></div><div class="shape"></div><div class="shape"></div></div>
   <div class="container hero">
     <div class="hero-grid">
       <div>
@@ -90,18 +87,9 @@
           <a href="services.html" class="btn-primary btn-outline"><i class="fas fa-play-circle"></i> Explore services</a>
         </div>
         <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">4.9★</span>
-            <span class="stat-label">Client rating</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Projects delivered</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">98%</span>
-            <span class="stat-label">Satisfaction</span>
-          </div>
+          <div class="stat-item"><span class="stat-number">4.9★</span><span class="stat-label">Client rating</span></div>
+          <div class="stat-item"><span class="stat-number">50+</span><span class="stat-label">Projects delivered</span></div>
+          <div class="stat-item"><span class="stat-number">98%</span><span class="stat-label">Satisfaction</span></div>
         </div>
       </div>
       <div class="hero-icons">
@@ -119,7 +107,7 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- SECTION 2: WHY ME -->
+<!-- WHY ME SECTION -->
 <!-- ============================================================ -->
 <section id="why">
   <div class="container text-center fade-in">
@@ -128,41 +116,17 @@
     <p class="section-sub">I handle the details so you can focus on what matters most – growing your business.</p>
   </div>
   <div class="container features-grid">
-    <div class="card fade-in">
-      <i class="fas fa-tasks"></i>
-      <h3>Admin Mastery</h3>
-      <p>From email management to scheduling, I keep your operations smooth and organized.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-hashtag"></i>
-      <h3>Social Media</h3>
-      <p>Grow your brand with engaging content, strategic posting, and community management.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-user-plus"></i>
-      <h3>Lead Management</h3>
-      <p>I nurture and convert leads so you can build lasting relationships with clients.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-code"></i>
-      <h3>Web Development</h3>
-      <p>Modern, responsive websites that reflect your brand and drive traffic.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-clock"></i>
-      <h3>Time Saver</h3>
-      <p>Reclaim your time – I handle the routine, you handle the strategy.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-handshake"></i>
-      <h3>Dedicated Partner</h3>
-      <p>I'm invested in your success. Reliable, proactive, and always available.</p>
-    </div>
+    <div class="card fade-in"><i class="fas fa-tasks"></i><h3>Admin Mastery</h3><p>From email management to scheduling, I keep your operations smooth and organized.</p></div>
+    <div class="card fade-in"><i class="fas fa-hashtag"></i><h3>Social Media</h3><p>Grow your brand with engaging content, strategic posting, and community management.</p></div>
+    <div class="card fade-in"><i class="fas fa-user-plus"></i><h3>Lead Management</h3><p>I nurture and convert leads so you can build lasting relationships with clients.</p></div>
+    <div class="card fade-in"><i class="fas fa-code"></i><h3>Web Development</h3><p>Modern, responsive websites that reflect your brand and drive traffic.</p></div>
+    <div class="card fade-in"><i class="fas fa-clock"></i><h3>Time Saver</h3><p>Reclaim your time – I handle the routine, you handle the strategy.</p></div>
+    <div class="card fade-in"><i class="fas fa-handshake"></i><h3>Dedicated Partner</h3><p>I'm invested in your success. Reliable, proactive, and always available.</p></div>
   </div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SECTION 3: SKILLS -->
+<!-- SKILLS SECTION -->
 <!-- ============================================================ -->
 <section id="skills">
   <div class="container text-center fade-in">
@@ -171,39 +135,21 @@
     <p class="section-sub">Years of experience across multiple disciplines.</p>
   </div>
   <div class="container skills-grid">
-    <div class="skill-item fade-in">
-      <div class="skill-label"><span>Administrative Support</span><span>95%</span></div>
-      <div class="skill-bar"><div class="fill" style="--target: 95%;"></div></div>
-    </div>
-    <div class="skill-item fade-in">
-      <div class="skill-label"><span>Social Media Management</span><span>90%</span></div>
-      <div class="skill-bar"><div class="fill" style="--target: 90%;"></div></div>
-    </div>
-    <div class="skill-item fade-in">
-      <div class="skill-label"><span>Lead Management / CRM</span><span>85%</span></div>
-      <div class="skill-bar"><div class="fill" style="--target: 85%;"></div></div>
-    </div>
-    <div class="skill-item fade-in">
-      <div class="skill-label"><span>Web Development</span><span>80%</span></div>
-      <div class="skill-bar"><div class="fill" style="--target: 80%;"></div></div>
-    </div>
+    <div class="skill-item fade-in"><div class="skill-label"><span>Administrative Support</span><span>95%</span></div><div class="skill-bar"><div class="fill" style="--target: 95%;"></div></div></div>
+    <div class="skill-item fade-in"><div class="skill-label"><span>Social Media Management</span><span>90%</span></div><div class="skill-bar"><div class="fill" style="--target: 90%;"></div></div></div>
+    <div class="skill-item fade-in"><div class="skill-label"><span>Lead Management / CRM</span><span>85%</span></div><div class="skill-bar"><div class="fill" style="--target: 85%;"></div></div></div>
+    <div class="skill-item fade-in"><div class="skill-label"><span>Web Development</span><span>80%</span></div><div class="skill-bar"><div class="fill" style="--target: 80%;"></div></div></div>
   </div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SECTION 4: CTA / CONTACT PREVIEW -->
+<!-- CTA SECTION -->
 <!-- ============================================================ -->
 <section id="contact-preview">
   <div class="container fade-in">
     <div class="cta-box">
-      <div>
-        <h2>Ready to elevate your business?</h2>
-        <p>Let's streamline your operations, boost your online presence, and drive real results.</p>
-      </div>
-      <div>
-        <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        <p style="margin-top: 12px; font-size: 0.85rem; opacity: 0.7;"><i class="fas fa-check-circle"></i> Flexible &amp; scalable support</p>
-      </div>
+      <div><h2>Ready to elevate your business?</h2><p>Let's streamline your operations, boost your online presence, and drive real results.</p></div>
+      <div><a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></div>
     </div>
   </div>
 </section>
@@ -230,7 +176,6 @@
   </div>
 </footer>
 
-<!-- Shared JavaScript -->
 <script src="js/main.js"></script>
 </body>
 </html>
