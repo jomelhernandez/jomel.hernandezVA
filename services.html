@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Jomel Hernandez | Virtual Professional</title>
-  
-  <!-- SEO Meta -->
   <meta name="description" content="Expert virtual assistant services: Administrative Support, Social Media Management, Lead Management, and Web Development.">
   <meta name="keywords" content="virtual assistant services, administrative support, social media management, lead management, web development, VAA">
   <meta property="og:title" content="Services | Jomel Hernandez | Virtual Professional">
@@ -14,28 +12,22 @@
   <meta property="og:description" content="Expert virtual assistant services tailored to your business needs.">
   <meta name="theme-color" content="#0f172a">
   
-  <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Shared Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- ===== DARK MODE TOGGLE ===== -->
-<button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
-  <i class="fas fa-moon" id="darkIcon"></i>
-  <span id="darkLabel">Dark</span>
-</button>
 
 <!-- ===== NAVIGATION ===== -->
 <nav class="navbar">
   <div class="container nav-flex">
     <a href="index.html" class="logo"><i class="fas fa-user-tie"></i> Jomel Hernandez</a>
-    <ul class="nav-links">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html" class="active">Services</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
@@ -44,6 +36,12 @@
     </ul>
   </div>
 </nav>
+
+<!-- ===== DARK MODE TOGGLE ===== -->
+<button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+  <i class="fas fa-moon" id="darkIcon"></i>
+  <span id="darkLabel">Dark</span>
+</button>
 
 <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
 <a href="https://wa.me/639165534649" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
@@ -58,23 +56,13 @@
 
 <!-- ===== STICKY CTA BAR ===== -->
 <div class="sticky-cta" id="stickyCta">
-  <span class="cta-text">
-    <i class="fab fa-whatsapp"></i> Ready to get started?
-  </span>
-  <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp">
-    <i class="fab fa-whatsapp"></i> Chat Now
-  </a>
+  <span class="cta-text"><i class="fab fa-whatsapp"></i> Ready to get started?</span>
+  <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat Now</a>
 </div>
 
-<!-- ============================================================ -->
-<!-- SERVICES HERO -->
-<!-- ============================================================ -->
+<!-- ===== SERVICES HERO ===== -->
 <section id="top" class="page-hero">
-  <div class="parallax-bg">
-    <div class="shape"></div>
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
+  <div class="parallax-bg"><div class="shape"></div><div class="shape"></div><div class="shape"></div></div>
   <div class="container text-center section-content">
     <span class="badge"><i class="fas fa-th-list"></i> What I Offer</span>
     <h1 class="section-title">My <span>Services</span></h1>
@@ -82,23 +70,17 @@
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- SERVICES GRID -->
-<!-- ============================================================ -->
+<!-- ===== SERVICES GRID ===== -->
 <section id="services" style="padding-top: 0;">
   <div class="container service-grid">
     
-    <!-- SERVICE 1: Social Media Management -->
+    <!-- Service 1: Social Media -->
     <div class="service-card fade-in">
-      <div class="icon-top">
-        <i class="fas fa-hashtag"></i>
-      </div>
+      <div class="icon-top"><i class="fas fa-hashtag"></i></div>
       <div class="content">
         <h4>Social Media Management</h4>
         <p class="preview-text">Content creation, scheduling, engagement – build a loyal following.</p>
-        <button class="fold-toggle" data-target="fold1">
-          <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-        </button>
+        <button class="fold-toggle" data-target="fold1"><span>Learn More</span> <i class="fas fa-chevron-down"></i></button>
         <div class="fold-content" id="fold1">
           <ul>
             <li><i class="fas fa-check-circle"></i> Strategy development &amp; planning</li>
@@ -108,24 +90,18 @@
             <li><i class="fas fa-check-circle"></i> Analytics &amp; performance reporting</li>
             <li><i class="fas fa-check-circle"></i> Paid social media advertising</li>
           </ul>
-          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;">
-            <i class="fas fa-arrow-right"></i> Get started
-          </a>
+          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;"><i class="fas fa-arrow-right"></i> Get started</a>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 2: Web Development -->
+    <!-- Service 2: Web Development -->
     <div class="service-card fade-in">
-      <div class="icon-top">
-        <i class="fas fa-code"></i>
-      </div>
+      <div class="icon-top"><i class="fas fa-code"></i></div>
       <div class="content">
         <h4>Web Development</h4>
         <p class="preview-text">Modern, SEO-friendly websites that convert visitors into clients.</p>
-        <button class="fold-toggle" data-target="fold2">
-          <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-        </button>
+        <button class="fold-toggle" data-target="fold2"><span>Learn More</span> <i class="fas fa-chevron-down"></i></button>
         <div class="fold-content" id="fold2">
           <ul>
             <li><i class="fas fa-check-circle"></i> High-quality pixel-perfect design</li>
@@ -135,24 +111,18 @@
             <li><i class="fas fa-check-circle"></i> WordPress &amp; Elementor Pro</li>
             <li><i class="fas fa-check-circle"></i> Unlimited revisions to meet your needs</li>
           </ul>
-          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;">
-            <i class="fas fa-arrow-right"></i> Get started
-          </a>
+          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;"><i class="fas fa-arrow-right"></i> Get started</a>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 3: Lead Management -->
+    <!-- Service 3: Lead Management -->
     <div class="service-card fade-in">
-      <div class="icon-top">
-        <i class="fas fa-user-plus"></i>
-      </div>
+      <div class="icon-top"><i class="fas fa-user-plus"></i></div>
       <div class="content">
         <h4>Lead Management</h4>
         <p class="preview-text">Organize, track, and nurture leads to boost your sales pipeline.</p>
-        <button class="fold-toggle" data-target="fold3">
-          <span>Learn More</span> <i class="fas fa-chevron-down"></i>
-        </button>
+        <button class="fold-toggle" data-target="fold3"><span>Learn More</span> <i class="fas fa-chevron-down"></i></button>
         <div class="fold-content" id="fold3">
           <ul>
             <li><i class="fas fa-check-circle"></i> Custom CRM solutions tailored to your business</li>
@@ -162,9 +132,7 @@
             <li><i class="fas fa-check-circle"></i> Sales pipeline management</li>
             <li><i class="fas fa-check-circle"></i> Integration with existing tools</li>
           </ul>
-          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;">
-            <i class="fas fa-arrow-right"></i> Get started
-          </a>
+          <a href="contact.html" class="btn-primary" style="margin-top: 12px; padding: 10px 24px; font-size: 0.9rem;"><i class="fas fa-arrow-right"></i> Get started</a>
         </div>
       </div>
     </div>
@@ -172,9 +140,7 @@
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- WHY CHOOSE ME SECTION -->
-<!-- ============================================================ -->
+<!-- ===== WHY CHOOSE ME ===== -->
 <section id="why-choose">
   <div class="container text-center fade-in">
     <span class="badge"><i class="fas fa-star"></i> Why Choose Me</span>
@@ -182,44 +148,23 @@
     <p class="section-sub">I don't just complete tasks – I become a trusted partner in your success.</p>
   </div>
   <div class="container features-grid" style="margin-top: 20px;">
-    <div class="card fade-in">
-      <i class="fas fa-clock"></i>
-      <h3>Reliable &amp; Available</h3>
-      <p>Available 24/7 to support your business needs. I'm always just a message away.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-gem"></i>
-      <h3>Quality Guaranteed</h3>
-      <p>100% satisfaction guaranteed. I won't stop until you're happy with the results.</p>
-    </div>
-    <div class="card fade-in">
-      <i class="fas fa-hand-holding-heart"></i>
-      <h3>Dedicated Partner</h3>
-      <p>I treat your business like my own. Your success is my success.</p>
-    </div>
+    <div class="card fade-in"><i class="fas fa-clock"></i><h3>Reliable &amp; Available</h3><p>Available 24/7 to support your business needs. I'm always just a message away.</p></div>
+    <div class="card fade-in"><i class="fas fa-gem"></i><h3>Quality Guaranteed</h3><p>100% satisfaction guaranteed. I won't stop until you're happy with the results.</p></div>
+    <div class="card fade-in"><i class="fas fa-hand-holding-heart"></i><h3>Dedicated Partner</h3><p>I treat your business like my own. Your success is my success.</p></div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- CTA SECTION -->
-<!-- ============================================================ -->
+<!-- ===== CTA ===== -->
 <section id="contact-cta">
   <div class="container fade-in">
     <div class="cta-box">
-      <div>
-        <h2>Ready to get started?</h2>
-        <p>Let's discuss how I can help streamline your business and boost your growth.</p>
-      </div>
-      <div>
-        <a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-      </div>
+      <div><h2>Ready to get started?</h2><p>Let's discuss how I can help streamline your business and boost your growth.</p></div>
+      <div><a href="https://wa.me/639165534649" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- FOOTER -->
-<!-- ============================================================ -->
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container footer-flex">
     <div>
@@ -239,7 +184,6 @@
   </div>
 </footer>
 
-<!-- Shared JavaScript -->
 <script src="js/main.js"></script>
 </body>
 </html>
