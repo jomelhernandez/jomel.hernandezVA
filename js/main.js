@@ -344,3 +344,26 @@
 console.log('🚀 Jomel Hernandez | Virtual Professional');
 console.log('📧 jomel.hernandez93@gmail.com');
 console.log('📱 +63916-553-4649');
+
+// ============================================================
+// HAMBURGER MENU TOGGLE
+// ============================================================
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (!hamburger || !navLinks) return;
+  
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  
+  // Close menu when a link is clicked (mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+})();
