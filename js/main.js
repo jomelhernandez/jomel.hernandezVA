@@ -31,6 +31,28 @@
 })();
 
 // ============================================================
+// NAVBAR ACTIVE LINK (for subpages)
+// ============================================================
+(function() {
+  // Get current page filename
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-links a:not(.btn-small)');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    // Check if href matches current page or if current page is index and href is './' or '/'
+    if (href === currentPage || 
+        (currentPage === 'index.html' && (href === './' || href === '/' || href === 'index.html'))) {
+      link.classList.add('active');
+    }
+    // For home page, also highlight if href is just '#'
+    if (href === '#' && currentPage === 'index.html') {
+      link.classList.add('active');
+    }
+  });
+})();
+
+// ============================================================
 // CUSTOM CURSOR (Desktop only)
 // ============================================================
 (function() {
@@ -53,7 +75,6 @@
     dot.style.top = mouseY + 'px';
   });
   
-  // Smooth ring follow
   function animateRing() {
     ringX += (mouseX - ringX) * 0.15;
     ringY += (mouseY - ringY) * 0.15;
@@ -63,7 +84,6 @@
   }
   animateRing();
   
-  // Hover effect on interactive elements
   const interactiveElements = document.querySelectorAll('a, button, .card, .service-card, .testimonial-card, .icon-box, .faq-item, .contact-card');
   interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', function() {
@@ -127,13 +147,13 @@
 })();
 
 // ============================================================
-// SMOOTH SCROLL FOR NAV LINKS (Floating Nav)
+// SMOOTH SCROLL FOR NAV LINKS
 // ============================================================
 (function() {
-  document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('.floating-nav a[href^="#"], .nav-links a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#' || targetId === '') return;
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
@@ -245,7 +265,6 @@
   if (!stickyCta) return;
   
   let lastScrollY = window.scrollY;
-  let isHidden = false;
   
   window.addEventListener('scroll', function() {
     const currentScrollY = window.scrollY;
@@ -261,15 +280,11 @@
     
     // Show/hide based on scroll direction
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // Scrolling down - hide
       stickyCta.style.transform = 'translateY(100%)';
       stickyCta.style.opacity = '0';
-      isHidden = true;
     } else {
-      // Scrolling up - show
       stickyCta.style.transform = 'translateY(0)';
       stickyCta.style.opacity = '1';
-      isHidden = false;
     }
     
     lastScrollY = currentScrollY;
@@ -283,7 +298,6 @@
   const whatsappBtn = document.querySelector('.whatsapp-float');
   if (!whatsappBtn) return;
   
-  // Add a subtle initial pulse
   setTimeout(() => {
     whatsappBtn.style.animation = 'none';
     setTimeout(() => {
@@ -313,21 +327,6 @@
 })();
 
 // ============================================================
-// NAVBAR ACTIVE LINK (for subpages)
-// ============================================================
-(function() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-links a:not(.btn-small)');
-  
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
-  });
-})();
-
-// ============================================================
 // KEYBOARD ACCESSIBILITY - ENTER/SPACE FOR FOLD TOGGLES
 // ============================================================
 (function() {
@@ -337,25 +336,6 @@
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         this.click();
-      }
-    });
-  });
-})();
-
-// ============================================================
-// SMOOTH SCROLL FOR NAVBAR LINKS (index.html)
-// ============================================================
-(function() {
-  // Only for home page anchor links
-  const homeLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  homeLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
